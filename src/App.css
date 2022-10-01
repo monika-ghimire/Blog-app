@@ -1,0 +1,30 @@
+.container
+{
+ 
+  justify-content: center;
+  background-color:#292c35;
+color: white;
+  width:50%;
+height:800px;
+ 
+}
+.container h2{
+text-align: center;
+}
+.listOfBlog
+{
+  margin-top:10%;
+  background-color:#E09145;
+ 
+}
+.BlogForm
+{
+  color: black;
+  float: right;
+  margin-top:5%;
+
+}
+.CreatBlog
+{
+  background-color:#E09145;
+}
