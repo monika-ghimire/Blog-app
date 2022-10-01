@@ -1,23 +1,26 @@
-import React from "react";
+import React ,{useState}from "react";
 import '../App.css';
 import { useDispatch } from "react-redux";
 import {addVlog} from '../reduxStore/reducer/vlogSlicer'
 export default function BlogContaent() {
   const dispatch=useDispatch();
-
+  const[id, setId] = useState(1);
+ 
   const submitForm=(event)=>
   {
     event.preventDefault();
     let x=event.target;
     let newBlog={
-      Title:x[0].value,
+      href:x[0].value,
       Authorised:x[1].value,
       Date:x[2].value,
-      Blog:x[3].value
+      Blog:x[3].value,
+      id:id
     }
    
     console.log(newBlog)
     dispatch(addVlog(newBlog))
+    setId(id+1);
  
 }
   return (
@@ -29,7 +32,7 @@ export default function BlogContaent() {
         data-bs-target="#exampleModal"
         data-bs-whatever="@getbootstrap"
       >
-        Created
+        Create
       </button>
 
       <div
@@ -61,7 +64,7 @@ export default function BlogContaent() {
                 </div>
                 <div class="mb-3">
                   <label for="Name" class="col-form-label">
-                  Authorised:
+                  Author by:
                   </label>
                   <input type="text" class="form-control" id="Name" />
                 </div> 

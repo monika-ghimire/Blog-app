@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState ,useEffect} from 'react';
 import '../App.css';
 import BlogContaent from './BlogContaent';
+import { Link } from "react-router-dom";
 import {useSelector } from "react-redux";
 import {
   SelectvlogSlice
@@ -8,7 +9,15 @@ import {
   
 export default function BlogHome() {
     const vlogSlice = useSelector(SelectvlogSlice);
-    console.log(vlogSlice +" this is selector")
+   
+    const [blogs, setBlogs] = useState([]);
+    useEffect(() => {
+      setBlogs(vlogSlice) 
+      console.log("hihihi")
+
+      console.log(vlogSlice);
+     },[]);
+ 
   return (
 <>
 <div className="container">
@@ -16,19 +25,32 @@ export default function BlogHome() {
    <BlogContaent/>
    </div>
    <h2 > See world daily blog</h2> 
-   {vlogSlice.map((x)=>{
- <div className="row listOfBlog ms-1 ">
    
-     <div className="col">
-        <h3>Title:{x.title}</h3>
-        <p>Authorised:{x.name}</p>
-        <p> Date: {x.date}</p>
-        <p>Blog: {x.Blog}</p>
-     
-     </div>
-     </div>
+ <div className="row listOfBlog ms-1 ">
+ {vlogSlice.map((x)=>{
+     return (
+     <div className="col-6">
+   <div class="card">
+<h3>
+  
+  
+  
+  
+  
+
+  <Link to={x.href}>Title:{x.href}</Link></h3>
+  <p> Date: {x.date}</p>
+  <p>Author by:{x.name}</p>
+  <div class="card-body">
+  <p>Blog: {x.Blog}</p>
  
-  })}
+  </div>
+  </div>
+     </div>
+          );
+        })}
+     </div>
+
    
 
  
