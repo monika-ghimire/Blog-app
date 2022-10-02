@@ -5,11 +5,11 @@ const vlogSlice = createSlice({
   initialState: {
     
     UservlogList: [
-      {href:"blog-id", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:0},
-      {href:"blog-id", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:1},
-      {href:"blog-id", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:2}
+      {href:"/blog/1", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:0},
+      {href:"/blog/1", date:"2072/34/5", name:"salina",Blog:"very testy food ever",id:1},
+      {href:"/blog/1", date:"2072/34/5", name:"suraj",Blog:"very testy food ever",id:2}
     ],
-    blog:{href:"blog-id", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:0},
+    blog:{href:"/blog/1", date:"2072/34/5", name:"Monika",Blog:"very testy food ever",id:0},
   },
 
  

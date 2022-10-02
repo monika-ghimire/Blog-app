@@ -30,3 +30,39 @@ text-align: center;
 {
   background-color:#9EA2F9;
 }
+.homecontainer
+{
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background-color: #AA55A4;
+
+}
+.homecontainer img{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+   margin-top:4%; 
+}
+.heading
+{
+  margin-top:2%;
+margin-left:7%;
+color: white;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  position: absolute;
+ 
+}
+.nextStep
+{
+  position: absolute;
+  margin-top:10%;
+  margin-left:15%;
+  width:80px;
+  height:80px;
+  background-color: white;
+  border-radius:50%;
+}

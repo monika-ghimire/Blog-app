@@ -1,5 +1,6 @@
 import React, { useState ,useEffect} from 'react';
 import '../App.css';
+import pig from '../Page/pig.png'
 import BlogContaent from './BlogContaent';
 import { Link } from "react-router-dom";
 import {useSelector } from "react-redux";
@@ -29,15 +30,10 @@ export default function BlogHome() {
  <div className="row listOfBlog ms-1 ">
  {vlogSlice.map((x)=>{
      return (
-     <div className="col-6">
+     <div className="col-4">
    <div class="card">
 <h3>
-  
-  
-  
-  
-  
-
+<img src={pig} class="card-img-top" alt="..."/>
   <Link to={x.href}>Title:{x.href}</Link></h3>
   <p> Date: {x.date}</p>
   <p>Author by:{x.name}</p>
