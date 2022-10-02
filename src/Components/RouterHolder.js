@@ -9,11 +9,11 @@ export default function RouterHolder() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="blog" element={<App />}>
+          <Route path="/" element={<Home/>}>  
+            <Route path="blog" element={<App/>}>
               <Route path=":blogId" element={<SingelVlog />} />
             </Route>
-          </Route>
+            </Route>
         </Routes>
       </BrowserRouter>
     </>
